@@ -3,8 +3,8 @@ import pyfiglet
 import time
 
 
-#giris = pyfiglet.figlet_format("MIMT Defence")
-#print(giris)
+logo = pyfiglet.figlet_format("MIMT Defence")
+print(logo)
 while True:
     mac_list=[]
     arp=os.popen("arp -a").read()
@@ -18,7 +18,7 @@ while True:
             if mac in mac_list:
                 print("MITM Attack")
                 print(time.time)
-                print("IP addresi: "+ip)
+                print("IP Address: "+ip)
                 break
             else:
                 mac_list.append(mac)
